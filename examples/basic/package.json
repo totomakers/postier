@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "react-email dev"
+    "dev": "postier dev"
   },
   "devDependencies": {
     "@postier/dev-server": "workspace:^",
