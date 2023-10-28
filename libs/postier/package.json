@@ -1,0 +1,31 @@
+{
+  "name": "postier",
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "bin": {
+    "postier": "./index.js"
+  },
+  "dependencies": {
+    "@postier/client": "workspace:^",
+    "unbuild": "^2.0.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.4",
+    "@types/node": "^20.8.9",
+    "@types/yargs": "^17.0.29",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,10 +1,9 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import {
-  DEFAULT_FILE_GLOB,
-  DEFAULT_PORT,
-  runDevServer,
-} from "./cmd/run-dev-server";
+import { devServer } from "@postier/client";
+
+export const DEFAULT_PORT = 3001;
+export const DEFAULT_FILE_GLOB = `**/*.email.tsx`;
 
 yargs(hideBin(process.argv))
   .command(
@@ -24,11 +23,14 @@ yargs(hideBin(process.argv))
           alias: "files",
         });
     },
-    (argv) => {
-      runDevServer({
+    async (argv) => {
+      const server = await devServer({
+        emails: [argv.f],
         port: argv.p,
-        fileGlob: argv.f,
       });
+
+      await server.listen();
+      server.printUrls();
     }
   )
   .demandCommand(1)

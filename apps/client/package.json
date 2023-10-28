@@ -1,40 +1,46 @@
 {
-  "name": "@postier/dev-server",
+  "name": "@postier/client",
   "version": "0.0.0",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/main.d.ts",
+      "import": "./dist/lib/main.mjs",
+      "require": "./dist/lib/main.cjs"
+    }
+  },
+  "main": "./dist/lib/main.cjs",
+  "module": "./dist/lib/main.mjs",
+  "types": "./dist/lib/main.d.ts",
   "files": [
-    "dist",
-    "index.js"
+    "dist"
   ],
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
-  "bin": {
-    "postier": "./index.js"
-  },
   "dependencies": {
     "@vitejs/plugin-react-swc": "^3.3.2",
     "fast-glob": "^3.3.1",
+    "just-merge": "^3.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rev-hash": "^4.0.0",
     "unbuild": "^2.0.0",
-    "vite": "^4.4.5",
-    "vite-plugin-virtual": "^0.2.0",
-    "yargs": "^17.7.2"
+    "vite": "^4.5.0",
+    "vite-plugin-virtual": "^0.2.0"
   },
   "devDependencies": {
-    "@types/minimist": "^1.2.4",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@types/yargs": "^17.0.29",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2"
+    "typescript": "^5.2.2",
+    "vite-plugin-dts": "^3.6.2"
   }
 }

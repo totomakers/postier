@@ -1,11 +1,13 @@
 import { Button } from "@react-email/button";
 
-export const Email = () => {
+export const Email2 = () => {
   return (
     <div>
       MON EMAIL azrazrzra aaa azarrazr azrzarzra azrazrzaazrazr zar azraze
-      azrazr
+      ararazr
       <Button href="http://google.fr">HELLo</Button>
     </div>
   );
 };
+
+export default {};

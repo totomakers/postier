@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { VirtualEmails } from "./VirtualEmails";
+import { Emails } from "./components/Emails";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <VirtualEmails />
+    <Emails />
   </React.StrictMode>
 );

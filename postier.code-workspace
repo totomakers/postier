@@ -5,8 +5,12 @@
       "name": "monorepo"
     },
     {
-      "path": "libs/dev-server",
-      "name": "libs/dev-server"
+      "path": "apps/client",
+      "name": "apps/client"
+    },
+    {
+      "path": "libs/postier",
+      "name": "libs/postier"
     },
     {
       "path": "libs/render",
