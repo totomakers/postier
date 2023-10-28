@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "monorepo"
+    },
+    {
+      "path": "libs/dev-server",
+      "name": "libs/dev-server"
+    },
+    {
+      "path": "libs/render",
+      "name": "libs/render"
+    },
+    {
+      "path": "examples/basic",
+      "name": "examples/basic"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "libs": true,
+      "examples": true
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@react-mail/example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "react-email dev"
+  },
+  "devDependencies": {
+    "@postier/dev-server": "workspace:^",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7"
+  },
+  "dependencies": {
+    "@react-email/button": "^0.0.11",
+    "@postier/render": "workspace:^",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
